@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "postbuild": "node scripts/copy-index-to-404.js",
+    "postbuild": "node scripts/copy-index-to-404.cjs",
     "deploy": "gh-pages -d dist",
     "start": "vite preview"
   },
