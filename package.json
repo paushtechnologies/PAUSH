@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "postbuild": "node scripts/copy-index-to-404.js",
+    "deploy": "gh-pages -d dist",
+    "start": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
